@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.testimonials-slider-container {
+    position: relative;
+  }
+  
+  .testimonials-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .testimonial {
+    flex: 0 0 auto;
+    width: 300px;
+    margin-right: 20px;
+    scroll-snap-align: start;
+  }
+  
+  .testimonial .content {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  
+  .stars {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  
+  .stars li {
+    color: gold;
+    font-size: 20px;
+  }
+  
+  .name {
+    margin-bottom: 5px;
+  }
+  
+  .email {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1;
+  }
+  
+  .slider-button.left {
+    left: 10px;
+  }
+  
+  .slider-button.right {
+    right: 10px;
+  }
+
+  @keyframes mymove {
+    from {right: 800px;}
+    to {left: 10px;}
+  }
+  .abcard {
+    position: relative;
+    animation: mymove 5s;
+    animation-fill-mode: forwards;
+    -webkit-animation: mymove 2s;
+}
