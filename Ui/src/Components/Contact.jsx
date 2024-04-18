@@ -19,7 +19,7 @@ const Contact = () => {
     };
   
     try {
-      const response = await fetch('http://localhost:5000/form2', {
+      const response = await fetch('https://sp-green.vercel.app/form2', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
