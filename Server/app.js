@@ -53,6 +53,10 @@ const transporter = nodemailer.createTransport({
 app.use(express.json());
 
 // API endpoint for form submission
+app.get("/",(res,req,next)=>{
+    res.send("hii");
+})
+
 app.post('/form1', upload.single('resume'), (req, res) => {
     // Check for file upload errors
     if (req.fileValidationError) {
